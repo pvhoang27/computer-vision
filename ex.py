@@ -11,5 +11,12 @@ with open("001771721_jpg.rf.687025a63ae5c9e58f2454ab1e41eaa9.txt" , "r") as to :
 
 annotation = [anno.rstrip().split(" ") for anno  in  annotation]
 
-print(annotation)
+# print(annotation)
+for  anno in annotation: 
+  category, x , y , w , h = anno 
+  x = float(x)
+  y = float(y)
+  w = float(w)
+  h = float(h)
+  cv2.rectangle(image, (5, 5), (220, 220), (255, 0, 0), 2)
 
